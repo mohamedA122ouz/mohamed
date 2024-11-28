@@ -34,13 +34,17 @@ let projectController = {
             let dom = document.querySelector("#info");
             let value = "";
             res.forEach((el) => {
+                /**
+                 * @type {string}
+                 */
+                const textContent = localStorage.getItem("preferedLang") === "ar" ? el.descriptionAR : el.descriptionEN;
                 value += `
                 <div class="infoCard">
                 <div class="cardicon">
                 <iframe src="${el.link}" title="${el.name}"></iframe>
                 </div>
                 <div class="describe">
-                <p class="text">${localStorage.getItem("preferedLang") === "ar" ? el.descriptionAR : el.descriptionEN}</p>
+                <p class="text">${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
                 </div><br>
                 <p class="button" onclick="mgGlobalLinks('${el.link}')">${localStorage.getItem("preferedLang") === "ar" ? "زياره" : "visit"}</p>
                 </div>
@@ -204,6 +208,9 @@ let projectController = {
         form = await form.text();
         let diver = this.appendToBody("div", "");
         diver.classList.add("shield");
+        diver.onclick = ()=>{
+            this.removeFromBody();
+        }
         let div = this.appendToBody("div", form);
         div.classList.add("formContainer");
         this.formContainer = div;
@@ -235,5 +242,16 @@ let projectController = {
     removeFromBody: function () {
         document.body.removeChild(this.sheild);
         document.body.removeChild(this.formContainer);
+    },
+    mgLocalLinks: function (link){
+        location.assign(`#${link}`);
+    },
+    mgGlobalLinks: function (link,target){
+        const a = document.createElement("a");
+        a.href = link;
+        a.target = target;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
     }
 }

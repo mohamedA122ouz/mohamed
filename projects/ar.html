@@ -61,12 +61,12 @@
                     </div>
                 </div>
                 <ul class="collapse">
-                    <li onclick="mgLocalLinks('infoContainer')">عني</li>
-                    <li onclick="mgLocalLinks('projects')">المشاريع</a></li>
+                    <li onclick="projectController.mgLocalLinks('infoContainer')">عني</li>
+                    <li onclick="projectController.mgLocalLinks('projects')">المشاريع</a></li>
                     <li
-                        onclick="mgGlobalLinks(`https://drive.google.com/file/d/1f9vhkzz-0jYA5QVjEUlCbtbqZHfcORpt/view?usp=sharing`,'_blank')">
+                        onclick="projectController.mgGlobalLinks(`https://drive.google.com/file/d/1f9vhkzz-0jYA5QVjEUlCbtbqZHfcORpt/view?usp=sharing`,'_blank')">
                         السيره الذاتيه</li>
-                    <li onclick="mgLocalLinks('contactMe')">تواصل معي</li>
+                    <li onclick="projectController.mgLocalLinks('contactMe')">تواصل معي</li>
                     <li onclick="selectLang('en')">اللغه:EN</li>
                 </ul>
             </div>
@@ -114,7 +114,7 @@
                             </p>
                         </div><br>
                         <p class="button"
-                            onclick="mgGlobalLinks('https://mohameda122ouz.github.io/coursera-work/Youtube/')">زياره</p>
+                            onclick="projectController.mgGlobalLinks('https://mohameda122ouz.github.io/coursera-work/Youtube/')">زياره</p>
                     </div>
                     <div class="infoCard">
                         <div class="cardicon">
@@ -125,7 +125,7 @@
                                 عرض كل المشاريع
                             </p>
                         </div><br>
-                        <p class="button" onclick="mgGlobalLinks('../projects/projects.html','_self')">عرض</p>
+                        <p class="button" onclick="projectController.mgGlobalLinks('../projects/projects.html','_self')">عرض</p>
                     </div>
                     <div class="infoCard">
                         <div class="cardicon">
@@ -136,7 +136,7 @@
                             </p>
                         </div><br>
                         <p class="button"
-                            onclick="mgGlobalLinks('https://drive.google.com/file/d/1f9vhkzz-0jYA5QVjEUlCbtbqZHfcORpt/view?usp=sharing')">
+                            onclick="projectController.mgGlobalLinks('https://drive.google.com/file/d/1f9vhkzz-0jYA5QVjEUlCbtbqZHfcORpt/view?usp=sharing')">
                             عرض الcv</p>
                     </div>
                 </div>
@@ -210,7 +210,7 @@
         </span>
     </footer>
     </div>
-    <script src="../script.js"></script>
+    <script src="../JS/script.js"></script>
     <script>
         let cdate = document.getElementById("cdate");
         let date = new Date();
