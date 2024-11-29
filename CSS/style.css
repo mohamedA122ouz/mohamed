@@ -312,15 +312,27 @@ h2 {
     flex-direction: column;
 }
 
+.projects>div>* {
+    height: 100%;
+}
 .projects>div {
     width: 100%;
+    gap: 2%;
     height: max-content;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     flex-direction: row;
 }
 
+.infoCard:hover {
+    animation: ease-in-out 1000ms infoHover;
+}
+.infoCard>.cardicon>img{
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
 .infoCard {
-    width: 30%;
+    width: auto;
     height: max-content;
     margin: auto;
     border-radius: 20px;
@@ -328,6 +340,7 @@ h2 {
     box-shadow: 0 0 15px -5px white;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
 
 .infoCard>.cardicon {
     width: 100%;
@@ -347,6 +360,17 @@ h2 {
 
 li {
     cursor: pointer;
+}
+@keyframes infoHover {
+    0%{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    50%{
+        background-color: rgba(94, 94, 94, 0.6);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
 }
 
 @keyframes move {

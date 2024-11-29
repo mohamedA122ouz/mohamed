@@ -33,6 +33,7 @@ let projectController = {
             console.log(res[0].imagePath);
             let dom = document.querySelector("#info");
             let value = "";
+            console.log("something wrong here");
             res.forEach((el) => {
                 /**
                  * @type {string}
@@ -46,7 +47,7 @@ let projectController = {
                 <div class="describe">
                 <p class="text">${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
                 </div><br>
-                <p class="button" onclick="mgGlobalLinks('${el.link}')">${localStorage.getItem("preferedLang") === "ar" ? "زياره" : "visit"}</p>
+                <p class="button" onclick="projectController.mgGlobalLinks('${el.link}')">${localStorage.getItem("preferedLang") === "ar" ? "زياره" : "visit"}</p>
                 </div>
                 `;
                 console.log(value);
@@ -57,19 +58,22 @@ let projectController = {
     createAcard: async function () {
         let res = await this.getAsFetch();
         let preferedLang = localStorage.getItem("preferedLang");
-        let dom = document.querySelector("#info");
+        // let dom = document.querySelector("#info");
+        let dom = document.querySelector("#projects");
         let value = "";
         res.forEach(el => {
+            const textContent = preferedLang === "ar" ? el.descriptionAR : el.descriptionEN
+            
             value +=
                 `
             <div class="infoCard">
             <div class="cardicon">
-            <iframe src="${el.link}" title="${el.name}" onclick="return false;"></iframe>
+            ${el.imagePath?`<img src="${el.imagePath}" alt="${el.name}">`:`<iframe src="${el.link}" title="${el.name}" onclick="return false;"></iframe>`}
             </div>
             <div class="describe">
-            <p class="text" style="direction:${preferedLang === "ar" ? "rtl" : "ltr"};" >${preferedLang === "ar" ? el.descriptionAR : el.descriptionEN}</p>
+            <p class="text" style="direction:${preferedLang === "ar" ? "rtl" : "ltr"};" >${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
             </div><br>
-            <p class="button" onclick="mgGlobalLinks('${el.link}')">${preferedLang === "ar" ? "زياره" : "visit"}</p>
+            <p class="button" onclick="projectController.mgGlobalLinks('${el.link}')">${preferedLang === "ar" ? "زياره" : "visit"}</p>
             </div>
             `;
         });
@@ -249,7 +253,7 @@ let projectController = {
     mgGlobalLinks: function (link,target){
         const a = document.createElement("a");
         a.href = link;
-        a.target = target;
+        a.target = target||"_blanck";
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);

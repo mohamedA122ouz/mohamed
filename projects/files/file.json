@@ -18,13 +18,55 @@
         "descriptionEN": "A frontend challenge on frontend mentor I had successfully done it",
         "descriptionAR": "هو تحدي يتواجد علي موقع frontend mentor انتهيت منه",
         "link": "https://mohameda122ouz.github.io/coursera-work/ageCalc",
-        "imagePath": "null"
+        "imagePath": "./files/imgs/(6).png"
     },
     {
         "name": "login page",
         "descriptionEN": "A login page that features a dynamic background with seven images. The images are displayed in a random order on each page load, then they cycle through in a sequence.",
         "descriptionAR": "صفحة تسجيل دخول تتميز بخلفية ديناميكية من سبعة صور. تتم عرض صوره عشوائيه عند تحميل كل صفحة اول مره ، ثم تتناوب في تسلسل.",
         "link": "https://mohameda122ouz.github.io/coursera-work/login/",
-        "imagePath": "null"
+        "imagePath": null
+    },
+    {
+        "name": "IP address tracker",
+        "descriptionEN": "This is a solution to the IP address tracker challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+        "descriptionAR": "هذا حل لتحدي تعقب عنوان IP على Frontend Mentor. تساعدك تحديات Frontend Mentor على تحسين مهاراتك في الترميز من خلال بناء مشاريع واقعية.",
+        "link": "https://mohameda122ouz.github.io/ip/",
+        "imagePath": null
+    },
+    {
+        "name": "Newsletter sign-up",
+        "descriptionEN": "This is a solution to the Newsletter sign-up form with success message challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+        "descriptionAR": "هذا حل لتحدي نموذج الاشتراك في النشرة الإخبارية مع رسالة النجاح على Frontend Mentor. تساعدك تحديات Frontend Mentor على تحسين مهاراتك في الترميز من خلال بناء مشاريع واقعية.",
+        "link": "https://mohameda122ouz.github.io/register/",
+        "imagePath": "./files/imgs/(4).png"
+    },
+    {
+        "name": "UMS-website",
+        "descriptionEN": "This is a solution to the Newsletter sign-up form with success message challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+        "descriptionAR": "هذا حل لتحدي نموذج الاشتراك في النشرة الإخبارية مع رسالة النجاح على Frontend Mentor. تساعدك تحديات Frontend Mentor على تحسين مهاراتك في الترميز من خلال بناء مشاريع واقعية.",
+        "link": "https://mohameda122ouz.github.io/ums",
+        "imagePath": "./files/imgs/(3).png"
+    },
+    {
+        "name": "XOGame",
+        "descriptionEN": "This is an interactive Tic Tac Toe game built using HTML, CSS, and JavaScript, designed for two players to compete in real-time by sharing a device. The game provides an intuitive user interface, tracks scores for both players, and offers a smooth, engaging experience.A future update will introduce AI-powered gameplay using TypeScript, allowing players to challenge the computer in dynamic, strategic matches.",
+        "descriptionAR": "هذا مشروع لعبة XO (Tic Tac Toe) تفاعلي، تم تطويره باستخدام HTML وCSS وJavaScript. يتيح للاعبين اللعب معًا في الوقت الفعلي على نفس الجهاز، مع توفير واجهة مستخدم بسيطة وسهلة الاستخدام. كما يقوم النظام بتتبع النتائج وتحديثها تلقائيًا.سيتم إضافة تحديث مستقبلي يتضمن ذكاءً اصطناعيًا مطوّرًا باستخدام TypeScript، مما يتيح للاعبين خوض مباريات استراتيجية ضد الكمبيوتر.",
+        "link": "https://mohameda122ouz.github.io/XOGame/",
+        "imagePath": "./files/imgs/(5).png"
+    },
+    {
+        "name": "File search application",
+        "descriptionEN": "Node application to search windows files",
+        "descriptionAR": "تطبيق نود للبحث في ملفات ويندوز",
+        "link": "https://github.com/mohamedA122ouz/fileSearch",
+        "imagePath": "./files/imgs/(8).png"
+    },
+    {
+        "name": "E-commerce product",
+        "descriptionEN": "This is a solution to the E-commerce product page challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+        "descriptionAR": "هذا حل لتحدي صفحة منتج التجارة الإلكترونية على Frontend Mentor. تساعدك تحديات Frontend Mentor على تحسين مهاراتك في الترميز من خلال بناء مشاريع واقعية.",
+        "link": "https://mohameda122ouz.github.io/ecommerce/",
+        "imagePath": "./files/imgs/(7).png"
     }
 ]
