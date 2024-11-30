@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Ghonim</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <title>محمد غنيم</title>
+    <link rel="shortcut icon" href="./photos/title.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/style.css">
     <script>
         let lang;
         try {
             lang = localStorage.getItem("preferedLang");
             if (lang === "en") {
-                window.location.href = "../index.html";
+                window.location.href = "./index.html";
             }
             else if (lang === "ar");
             else
@@ -30,7 +31,7 @@
             font-size: 2.5rem;
         }
 
-        home>svg {
+        .home>svg {
             width: 25px;
             height: 25px;
         }
@@ -76,7 +77,13 @@
             <section id="w">
                 <div class="welcome animated">
                     <div>
-                        <h1>مرحبا في, رَامَ</h1>
+                        <a href="https://www.github.com/mohameda122ouz">
+                            <div id="me">
+                                <img src="./photos/welcome.jpeg" alt="my photo" title="Click to visit my Github"
+                                    oncontextmenu="return false">
+                            </div>
+                        </a>
+                        <h1>محمد غنيم</h1>
                         <p>موقع عرض الاعمال الخاصه بي.</p>
                     </div>
                 </div>
@@ -84,7 +91,7 @@
             <section id="infoContainer">
                 <div id="info" class="info">
                     <div id="me">
-                        <img src="../photos/0IMG_20230103_163930_306.jpg" alt="my photo" oncontextmenu="return false">
+                        <img src="./photos/0IMG_20230103_163930_306.jpg" alt="my photo" oncontextmenu="return false">
                     </div>
                     <div id="infoText">
                         <p>الاسم: محمد احمد عزوز</p><br>
@@ -105,7 +112,7 @@
                 <div>
                     <div class="infoCard">
                         <div class="cardicon">
-                            <img src="../projects/files/imgs/(2).png" alt="card icon Youtube API">
+                            <img src="./projects/files/imgs/(2).png" alt="card icon Youtube API">
                         </div>
                         <div class="describe">
                             <p class="text">
@@ -118,18 +125,18 @@
                     </div>
                     <div class="infoCard">
                         <div class="cardicon">
-                            <img src="../photos/Screenshot 2023-06-16 184933.png" alt="Show All Projects">
+                            <img src="./photos/Screenshot 2023-06-16 184933.png" alt="Show All Projects">
                         </div>
                         <div class="describe">
                             <p class="text">
                                 عرض كل المشاريع
                             </p>
                         </div><br>
-                        <p class="button" onclick="projectController.mgGlobalLinks('../projects/projects.html','_self')">عرض</p>
+                        <p class="button" onclick="projectController.mgGlobalLinks('./projects/projects.html','_self')">عرض</p>
                     </div>
                     <div class="infoCard">
                         <div class="cardicon">
-                            <img src="../photos/Screenshot 2023-06-16 182747.png" alt="CV ICON">
+                            <img src="./photos/Screenshot 2023-06-16 182747.png" alt="CV ICON">
                         </div>
                         <div class="describe">
                             <p class="text">
@@ -171,12 +178,13 @@
                     </svg>
                 </a>
             </div>
-            <a href="mailto:studyatmohamed@gmail.com" target="">
+            <a href="mailto:studyatmohamed@gmail.com">
                 <svg class="cIcon" viewBox="0 0 134 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1:194)">
                         <path d="M9.09091 100H30.303V48.4848L0 25.7576V90.9091C0 95.9394 4.07576 100 9.09091 100Z"
                             fill="#4285F4" />
-                        <path d="M103.03 100H124.242C129.273 100 133.333 95.9242 133.333 90.9091V25.7576L103.03 48.4848"
+                        <path
+                            d="M103.03 100H124.242C129.273 100 133.333 95.9242 133.333 90.9091V25.7576L103.03 48.4848"
                             fill="#34A853" />
                         <path
                             d="M103.03 9.09091V48.4848L133.333 25.7576V13.6364C133.333 2.39394 120.5 -4.01515 111.515 2.72727"
@@ -194,29 +202,27 @@
                     </defs>
                 </svg>
             </a>
-            <div class="cIcon div" onclick="projectController.showMessageContainer()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
-                    class="bi bi-send-plus-fill" viewBox="0 0 16 16">
+            <div class="cIcon div fixed" onclick="projectController.showMessageContainer()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
                     <path
-                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 1.59 2.498C8 14 8 13 8 12.5a4.5 4.5 0 0 1 5.026-4.47zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
-                    <path
-                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5" />
+                        d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
                 </svg>
             </div>
         </div>
         <span>
-            &nbsp;محمد احمد عزوز
             <span id="cdate"></span>
+            &nbsp;محمد غنيم
         </span>
     </footer>
     </div>
-    <script src="../JS/script.js"></script>
+    <script src="./JS/script.js"></script>
     <script>
         let cdate = document.getElementById("cdate");
         let date = new Date();
         cdate.innerHTML = "&copy;" + date.getFullYear();
     </script>
-    <script src="../JS/animation.js"></script>
+    <script src="./JS/animation.js"></script>
 </body>
 
 </html>

@@ -19,6 +19,10 @@ let get = (url, method = "GET") => {
         }
     });
 }
+function selectLang(lang) {
+    localStorage.setItem("preferedLang", lang);
+    window.location.reload();
+}
 async function gitProjects() {
     let data = await fetch("https://api.github.com/users/mohameda122ouz/repos");
     data = await data.json();
@@ -46,7 +50,7 @@ let projectController = {
                 </div>
                 <div class="describe">
                 <p class="text">${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
-                </div><br>
+                </div>
                 <p class="button" onclick="projectController.mgGlobalLinks('${el.link}')">${localStorage.getItem("preferedLang") === "ar" ? "زياره" : "visit"}</p>
                 </div>
                 `;
@@ -71,8 +75,8 @@ let projectController = {
             ${el.imagePath?`<img src="${el.imagePath}" alt="${el.name}">`:`<iframe src="${el.link}" title="${el.name}" onclick="return false;"></iframe>`}
             </div>
             <div class="describe">
-            <p class="text" style="direction:${preferedLang === "ar" ? "rtl" : "ltr"};" >${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
-            </div><br>
+            <p class="text" style="direction:${preferedLang === "ar" ? "rtl" : "ltr"};" >${textContent.length>100?textContent.substring(0,160)+".....":textContent}</p>
+            </div>
             <p class="button" onclick="projectController.mgGlobalLinks('${el.link}')">${preferedLang === "ar" ? "زياره" : "visit"}</p>
             </div>
             `;

@@ -11,6 +11,7 @@
 #projects>.infoCard{
     height: 100%;
     position:relative;
+    margin:0px;
 }
 #projects>.infoCard>.cardicon>iframe{
     aspect-ratio: 16 / 9;
@@ -21,7 +22,8 @@
 @media (max-width:800px) {
     #projects{
         grid-template-columns: auto;
-        margin:5%;
-        padding-bottom:100%;
+        margin-bottom: 19%;
+        padding-bottom: 20%;
+        gap: 0.2%;
     }
 }

@@ -122,15 +122,18 @@ header {
     width: 250px;
     height: 250px;
     margin: auto;
+    
 }
 
 #me>img {
+    object-fit: cover;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 1px solid black;
     margin: auto;
     user-select: none;
+    -webkit-user-select: none;
 }
 
 #info {
@@ -177,6 +180,7 @@ header {
     margin: auto;
     cursor: pointer;
     user-select: none;
+    -webkit-user-select: none;
     box-shadow: 0 0 50px -12px rgb(5, 226, 255);
 }
 
@@ -315,6 +319,7 @@ h2 {
 .projects>div>* {
     height: 100%;
 }
+
 .projects>div {
     width: 100%;
     gap: 2%;
@@ -327,11 +332,16 @@ h2 {
 .infoCard:hover {
     animation: ease-in-out 1000ms infoHover;
 }
-.infoCard>.cardicon>img{
+
+.infoCard>.cardicon>img {
     aspect-ratio: 16 / 9;
     object-fit: contain;
 }
+
 .infoCard {
+    display: grid;
+    gap: 5px;
+    grid-template-rows: auto auto 50px;
     width: auto;
     height: max-content;
     margin: auto;
@@ -361,14 +371,17 @@ h2 {
 li {
     cursor: pointer;
 }
+
 @keyframes infoHover {
-    0%{
+    0% {
         background-color: rgba(0, 0, 0, 0.6);
     }
-    50%{
+
+    50% {
         background-color: rgba(94, 94, 94, 0.6);
     }
-    100%{
+
+    100% {
         background-color: rgba(0, 0, 0, 0.6);
     }
 }
@@ -466,13 +479,15 @@ li {
     }
 
     #toggel {
-        display: block;
+        display: flex;
         cursor: pointer;
         margin-left: -10px;
+        justify-content: center;
+        align-items: center;
     }
 
     .projects {
-        padding: 20px;
+        padding: 0px;
     }
 
     .projects>div {
