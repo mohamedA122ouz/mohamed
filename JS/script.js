@@ -210,8 +210,8 @@ let projectController = {
             console.log(e);
         }
     },
-    showMessageContainer: async function () {
-        let form = await this.getAsAsync("projects/files/message.html");
+    showMessageContainer: async function (formPlace) {
+        let form = await this.getAsAsync(formPlace || "projects/files/message.html");
 
         form = await form.text();
         let diver = this.appendToBody("div", "");
