@@ -354,8 +354,8 @@ h2 {
     padding: 20px;
     box-shadow: 0 0 15px -5px white;
     transition: ease-in-out 400ms;
-    background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 
