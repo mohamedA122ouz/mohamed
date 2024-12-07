@@ -72,7 +72,7 @@ let projectController = {
                 `
             <div class="infoCard">
             <div class="cardicon">
-            ${el.imagePath?`<img src="${el.imagePath}" alt="${el.name}">`:`<iframe src="${el.link}" title="${el.name}" onclick="return false;"></iframe>`}
+            ${el.imagePath?`<img loading="lazy" src="${el.imagePath}" alt="${el.name}">`:`<iframe src="${el.link}" title="${el.name}" onclick="return false;"></iframe>`}
             </div>
             <div class="describe">
             <p class="text" title="${textContent}" style="direction:${preferedLang === "ar" ? "rtl" : "ltr"};" >${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
