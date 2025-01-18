@@ -34,7 +34,6 @@ function clickCard(ev: MouseEvent) {
 function extend() {
     const currentPosition: [number, number] = [current.card!.offsetLeft, current.card!.offsetTop];
     const size: [number, number] = [current.card!.clientWidth, current.card!.clientHeight];
-    const div: HTMLElement = document.createElement('div');
     current.card!.style.cssText = `
     position: absolute;
     left: ${currentPosition[0]}px;
