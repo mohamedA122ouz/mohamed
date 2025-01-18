@@ -67,3 +67,4 @@ let observer = new IntersectionObserver((Elements)=>{
     })
 },{threshold:1,rootMargin:"-10px"});
 observer.observe(document.querySelector('a[href="mailto:studyatmohamed@gmail.com"]'));
+

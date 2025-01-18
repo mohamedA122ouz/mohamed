@@ -12,7 +12,7 @@
             }
         },
         "section_W": {
-            "h1": "مرحبا في, رَامَ",
+            "h1": "محمد غنيم",
             "p": "موقع عرض الاعمال الخاصه بي."
         },
         "section_infoContainer": {
@@ -41,5 +41,18 @@
         ".centerP": "عني",
         "p3": "أنا مطور واجهة أمامية متعلم بنفسي وطالب علوم حاسب في كلية العلوم بجامعة عين شمس. لدي شغف بإنشاء مواقع ويب جميلة ومتجاوبة باستخدام HTML5 و CSS3 و vanilla JS ES6 و Bootstrap و Google Fonts. لدي أيضًا فكرة عن كيفية استخدام MySQL ودرست هياكل البيانات. لقد قمت ببناء العديد من المشاريع لنفسي التي توضح مهاراتي وإبداعي ، مثل موقع الويب الخاص بي ، ومشروع YouTube API وتطبيق قائمة المهام. هدفي هو الانضمام إلى شركة حيث يمكنني التعلم من المطورين ذوي الخبرة والمساهمة في مشاريع ويب مثيرة.",
         "p4": "تواصل معي"
-    }
+    },
+    "RETURNBACK":[{
+        "name": "IP address tracker",
+        "descriptionEN": "This is a solution to the IP address tracker challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+        "descriptionAR": "هذا حل لتحدي تعقب عنوان IP على Frontend Mentor. تساعدك تحديات Frontend Mentor على تحسين مهاراتك في الترميز من خلال بناء مشاريع واقعية.",
+        "link": "https://mohameda122ouz.github.io/ip/",
+        "imagePath": null
+    },    {
+        "name": "login page",
+        "descriptionEN": "A login page that features a dynamic background with seven images. The images are displayed in a random order on each page load, then they cycle through in a sequence.",
+        "descriptionAR": "صفحة تسجيل دخول تتميز بخلفية ديناميكية من سبعة صور. تتم عرض صوره عشوائيه عند تحميل كل صفحة اول مره ، ثم تتناوب في تسلسل.",
+        "link": "https://mohameda122ouz.github.io/coursera-work/login/",
+        "imagePath": null
+    }]
 }

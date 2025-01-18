@@ -26,7 +26,6 @@ function selectLang(lang) {
 async function gitProjects() {
     let data = await fetch("https://api.github.com/users/mohameda122ouz/repos");
     data = await data.json();
-
 }
 
 let projectController = {
@@ -62,7 +61,6 @@ let projectController = {
     createAcard: async function () {
         let res = await this.getAsFetch();
         let preferedLang = localStorage.getItem("preferedLang");
-        // let dom = document.querySelector("#info");
         let dom = document.querySelector("#projects");
         let value = "";
         res.forEach(el => {
@@ -71,14 +69,17 @@ let projectController = {
             value +=
                 `
             <div class="infoCard">
-            <div class="cardicon">
-            ${el.imagePath?`<img loading="lazy" src="${el.imagePath}" alt="${el.name}">`:`<iframe src="${el.link}" title="${el.name}" onclick="return false;"></iframe>`}
+                <div class="cardicon">
+                    ${el.imagePath?`<img loading="lazy" src="${el.imagePath}" alt="${el.name}">`:`<iframe src="${el.link}" title="${el.name}" onclick="return false;"></iframe>`}
+                </div>
+                <div class="describe">
+                    <p class="text" title="${textContent}" style="direction:${preferedLang === "ar" ? "rtl" : "ltr"};" >${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
+                </div>
+                <div class="show" title="Click for more details ">
+                    <p class="button" onclick="projectController.mgGlobalLinks('${el.link}')">${preferedLang === "ar" ? "زياره" : "visit"}</p>
+                </div>
             </div>
-            <div class="describe">
-            <p class="text" title="${textContent}" style="direction:${preferedLang === "ar" ? "rtl" : "ltr"};" >${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
-            </div>
-            <p class="button" onclick="projectController.mgGlobalLinks('${el.link}')">${preferedLang === "ar" ? "زياره" : "visit"}</p>
-            </div>
+
             `;
         });
         dom.innerHTML = value;
