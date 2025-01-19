@@ -14,10 +14,32 @@
     animation: 500ms animate forwards ;
     animation-delay: 20ms;
     transition: 0ms;
+    padding:0px
 }
-.show>{
 
+@media (min-width:800px) {
+    #currentlyShown>.describe{
+        animation: 500ms animate2 forwards ;
+        animation-delay: 150ms;
+        height: 10%;
+        bottom: 0%;
+    }
 }
+#currentlyShown>.describe{
+    animation-delay: 150ms;
+    height: 10%;
+    bottom: 0%;
+}
+#currentlyShown>.describe>.text{
+    display: inline;
+    text-align: start;
+}
+#currentlyShown>.describe>h2{
+    visibility: visible !important;
+    margin-top:15%;
+    margin-bottom:10%;
+}
+
 @keyframes animate {
     0%{
         transform: translateY(50%);
@@ -31,5 +53,21 @@
         height: 100vh;
         position: fixed;
         background-color:black;
+    }
+}
+@keyframes animate2 {
+    0%{
+        transform: translateY(0%);
+        top:100%;
+    }
+    100%{
+        border-top-right-radius: 5%;
+        position:absolute;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.528);
+        height: 100%;
+        width: 70%;
+        top:0%;
     }
 }

@@ -276,6 +276,13 @@ h2 {
     margin: 10px;
     border: 0.1rem solid rgb(8, 135, 194);
 }
+.text{
+    overflow: hidden;
+    white-space: wrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 
 .cIcon:hover {
     transition: 250ms;

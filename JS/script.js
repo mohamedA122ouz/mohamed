@@ -48,7 +48,7 @@ let projectController = {
                 <iframe src="${el.link}" title="${el.name}"></iframe>
                 </div>
                 <div class="describe">
-                <p class="text">${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
+                <p class="text">${textContent}</p>
                 </div>
                 <p class="button" onclick="projectController.mgGlobalLinks('${el.link}')">${localStorage.getItem("preferedLang") === "ar" ? "زياره" : "visit"}</p>
                 </div>
@@ -73,7 +73,8 @@ let projectController = {
                     ${el.imagePath?`<img loading="lazy" src="${el.imagePath}" alt="${el.name}">`:`<iframe src="${el.link}" title="${el.name}" onclick="return false;"></iframe>`}
                 </div>
                 <div class="describe">
-                    <p class="text" title="${textContent}" style="direction:${preferedLang === "ar" ? "rtl" : "ltr"};" >${textContent.length>100?textContent.substring(0,100)+".....":textContent}</p>
+                    <h2 style="visibility:hidden;">More Details</h2>
+                    <p class="text" title="${textContent}" style="direction:${preferedLang === "ar" ? "rtl" : "ltr"};" >${textContent}</p>
                 </div>
                 <div class="show" title="Click for more details ">
                     <p class="button" onclick="projectController.mgGlobalLinks('${el.link}')">${preferedLang === "ar" ? "زياره" : "visit"}</p>
