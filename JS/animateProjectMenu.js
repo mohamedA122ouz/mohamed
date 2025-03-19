@@ -8,6 +8,7 @@ function clickCard(ev) {
             return;
         current.card = currentEvent.parentElement;
         if (current.card !== null && current.card.className === "infoCard") {
+            extend();
             current.card.id = "currentlyShown";
             const div = document.createElement('div');
             div.textContent = 'X';
@@ -24,7 +25,6 @@ function clickCard(ev) {
                 ev.target.removeChild(div);
             });
             ev.target?.prepend(div);
-            extend();
         }
     }
     if (current.card === null) {
@@ -35,14 +35,17 @@ function clickCard(ev) {
     }
 }
 function extend() {
-    const currentPosition = [current.card.offsetLeft, current.card.offsetTop];
+    console.log("extend is here");
+    const positions = current.card.getBoundingClientRect();
+    const currentPosition = [positions.left, positions.top];
     const size = [current.card.clientWidth, current.card.clientHeight];
     current.card.style.cssText = `
-    position: absolute;
+    position: fixed;
     left: ${currentPosition[0]}px;
     top: ${currentPosition[1]}px;
     width: ${size[0]}px;
     height: ${size[1]}px;
+    z-index:1;
     `;
 }
 function removeExtend() {
